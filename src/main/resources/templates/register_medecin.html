@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+>
+
+<head>
+  <meta charset="utf-8"/>
+  <title>SSE Medecin | Inscription</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui"/>
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+  <meta name="author" content=""/>
+  <link href="../../includes/css/bootstrap.css"
+        th:href="@{/includes/css/bootstrap.css}"
+        rel="stylesheet" type="text/css"/>
+  <link href="../../includes/css/custom.css"
+        th:href="@{/includes/css/custom.css}"
+        rel="stylesheet" type="text/css"/> </head>
+
+<body>
+  <div class="page login-page">
+    <div class="container col-md-12">
+      <div class="form-outer text-center d-flex align-items-center col-md-6">
+        <div class="form-inner col-md-12">
+          <div class="text-uppercase">Sénégal Santé émergent</div>
+          <hr/>
+          <p>Inscrivez Vous !</p>
+          <form class="text-left form-validate col-md-12" th:action="@{/saveMedecin}" method="post" th:object="${medecin}">
+            <div class="form-group-material">
+              <input id="matricule" type="text" th:field="${medecin.matricule}" placeholder="Matricule" required="" data-msg="Please enter your username" class="input-material"/> </div>
+            <div class="form-group-material">
+              <input id="email" type="email" th:field="${medecin.email}"placeholder="Email" required="" data-msg="Please enter a valid email address" class="input-material"/> </div>
+            <div class="form-group-material">
+              <input id="password1" type="password" placeholder="Mot de Passe" required="" data-msg="Please enter your password" class="input-material"/> </div>
+            <div class="form-group-material">
+              <input id="password2" type="password" placeholder="Vérifier Mot de Passe" required="" data-msg="Please enter your password" class="input-material"/> </div>
+            <div class="form-group terms-conditions text-center">
+              <input id="register-agree" name="registerAgree" type="checkbox" required="" value="1" data-msg="Your agreement is required" class="form-control-custom"/>
+              <label for="register-agree">J'accepte les <a href="#">conditions d'utilisation</a></label>
+            </div>
+            <div class="form-group text-center">
+              <button id="register" type="submit" class="btn btn-primary">Inscription</button>
+            </div>
+          </form>
+          <small>J'ai déjà un compte? </small>
+          <a href="#" class="signup">Connexion</a>
+        </div>
+        <div class="copyrights text-center">
+          <p>Design by
+            <a href="#" class="external">A-TEAM</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../includes/js/bootstrap.js"
+          th:src="@{/includes/js/bootstrap.js}"
+  ></script>
+  <script src="../../includes/js/jquery.js"
+          th:src="@{/includes/js/jquery.js}"
+  ></script>
+  <script src="../../includes/js/popper.js"
+          th:src="@{/includes/js/popper.js}"
+  ></script>
+</body>
+
+</html>
