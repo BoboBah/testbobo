@@ -10,6 +10,9 @@ import java.util.Collection;
 public class Accident implements Serializable {
 
 
+//------------------------------------------------------
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idAccident;
